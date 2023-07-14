@@ -489,7 +489,46 @@
  - 이미지에 대한 캡션이나 설명을 위한 태그
  - 문서의 흐름에 영향을 주지 않는 콘텐츠 마크업에도 사용
 
+## text-align
 
+- 문장을 정렬하는 속성
+
+```css
+선택자{
+    text-align: left or right or center or justify;
+}
+```
+## text-indent
+
+- 문장을 들여쓰기 하는 속성
+
+```css
+선택자{
+    text-indent: 숫자(단위);
+}
+```
+
+## line-heigt
+
+- 문장의 줄 간격을 조정하는 속성
+
+```css
+선택자{
+    line-height: normal or 숫자(단위);
+}
+```
+
+## text-overflow
+
+- 영역을 벗어나는 텍스트에 대한 상태를 지정하는 속성
+```css
+선택자{
+    text-overflow: clip or ellipsis;
+}
+```
+
+- clip: 영역을 넘어가는 텍스트를 자른다.
+- ellipsis: 말 줄임으로 잘린 텍스트를 표현한다.
 
 
 
