@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: lightsalmon;
+    background: linear-gradient(purple, pink);
+    height: 100vh; /*heigh값에 vh로 전체화면으로 만들어*/
+    padding: 50px;
+}
+.profile-card{
+    width: 300px;
+    /* height: 400px; */
+    /* background-color: white; */
+  
+    border-radius: 10px;
+    margin: 30px auto;
+    text-align: center; /*안에 있는 걸 다 가운데 정렬*/
+    padding: 20px 5px
+   
+}
+.profile-card_main{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.profile-card_main img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+    
+}
+.profile-card_main h1{
+    font-size: 1rem;
+    color: #666;
+    color: white;
+}
+.profile-card_list a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    /* background-color: lightsalmon; */
+    border: 2px solid white;
+    padding: 15px 20px;
+    font-weight: bold;
+    margin: 10px;
+}
