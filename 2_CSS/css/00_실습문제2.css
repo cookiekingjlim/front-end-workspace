@@ -1,0 +1,95 @@
+header {
+    /* background-color: aqua; 식별용 */
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+
+    position: fixed;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    line-height: 60px;
+}
+
+header nav {
+    /* 헤더 전체 띄움 */
+    margin-right: 20px; 
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;  /*밑줄 없앰*/
+    color: black;
+    line-height: 60px;
+    display: inline-block; /*글씨 가까이 갔을 때 클릭 가능하게끔 영역 확장*/
+    /* background-color: palevioletred;    식별 위한 컬러 */
+    padding: 0 10px;
+}
+header nav a:hover {
+    color: tomato;  /*마우스 올라갈 때마다 색상 바뀌게*/
+}
+
+main {
+    padding-top: 60px;  /*헤더랑 메인 띄움&헤더 상단 고정 느낌??*/
+}
+main section {  /*지금은 섹션이 컨테이너인 것*/
+    height: 100vh;  /*구역 변경*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main #section1 {
+    background-color: orangered;
+}
+main #section2 {
+    background-color: purple;
+}
+main #section3 {
+    background-color: yellow;
+}
+
+main section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;;
+}
+main section p {
+    width: 50%;
+    text-align: center;
+    line-height: 1.4rem;
+}
+
+main #top { /*아이디 같은 경우 main 제외해도 괜찮음*/
+    width: 90px;
+    height: 90px;
+    background-color: grey;
+    border-radius: 50%;
+    
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+main #top a {   /*a태그랑 원이 따로 놀고 있으므로*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    height: 100%;
+    
+}
