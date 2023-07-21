@@ -188,3 +188,4 @@
  ```js
  부모객체(문서객체.parentNode).removeChild(자식객체)
  ```
+
