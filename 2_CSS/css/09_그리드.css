@@ -1,0 +1,61 @@
+.grid{
+    background-color: lightgray;
+
+    /*1. display: grid;   -> 그리드 컨테이너 쓸게! 시작!*/
+    display: grid;
+
+    /*2. grid-template-columns*/
+    /*가로로 200픽섹 500픽셀 300픽셀 주겠다*/
+    grid-template-columns: 200px 500px 300px;
+    grid-template-columns: 40% 60%; 
+    grid-template-columns: 4fr 6fr; /* fr: fraction의 약자 */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-columns: 200px 1fr 200px; /*가운데만 늘어남*/
+    /* grid-template-columns: repeat(auto-fill, 200px);     */
+    /*grid-template-columns: repeat(auto-fit, minmax(20%, auto)); /*minmax(최솟값, 최댓값 지정)이만큼 채우겠다*/
+
+    /*3. gap*/
+    /* row-gap: 20px;
+    column-gap: 30px; */
+    gap: 20px;
+
+    /*4. auto-rows*/
+    grid-template-rows: repeat(2,150px);
+    grid-auto-rows: 200px;
+
+    /*5. justify-items*/
+    /*
+    justify-items: start;
+    justify-items: center;
+    justify-items: end;*/
+
+    /*
+    align-items: start;
+    align-items: center;
+    align-items: end; */
+}
+.item{
+    background-color: white;
+    border: 3px solid black;    /*각각의 이미지가 어디에 속해있는지 구분 위해*/
+    padding: 10px;
+}
+.item:nth-child(1) {
+    grid-column:1/4;
+}
+.item:nth-child(4) {
+    grid-column: 3;
+    grid-row:2/4;   /*grid-column없이 이것만 주면 좌측으로 몰림*/
+}
+.item:nth-child(9) {
+    grid-column: 3;
+    grid-row: 3/5;
+}
+.item:nth-child(6) {
+    justify-self: center;
+    align-self: center;
+}
+.item img {
+    height: 95px;
+    
+}
