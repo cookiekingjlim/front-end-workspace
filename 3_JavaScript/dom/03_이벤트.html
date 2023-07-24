@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <link rel="stylesheet" href="css/03_이벤트.css">
+   
+    <!-- 1.위에서부터 순차적으로 읽어오므로, 스크립트는 바디 하단에 작성해두는 게 좋다.-->
+    <!-- 2.헤드에서 쓰고 싶다면 js에서 window.addEventlistener를 사용하여 load/DomContentLoaded를 사용한다. 이때 load보다 후자를 더 자주 사용한다. -->
+    <!-- 3. 위 두가지 외에도 스크립트에 defer를 사용하기도 한다. -->
+    <!-- 1~3의 차이는 속도와 읽는 시점 차이 -->
+    <script defer src="js/03_이벤트.js"></script>  
+        
+
+</head>
+<body>
+    <h1>이벤트</h1>
+
+    <div class="container">
+        <img src="../../resources/grid2.jpg" alt="">
+        <img src="../../resources/grid3.jpg" alt="">
+        <img src="../../resources/grid4.jpg" alt="">
+        <img src="../../resources/grid5.jpg" alt="">
+        <img src="../../resources/grid6.jpg" alt="">
+    </div>
+    
+</body>
+</html>
