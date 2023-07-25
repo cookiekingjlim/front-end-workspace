@@ -18,3 +18,65 @@ window.addEventListener('scroll',function(){
 
 window.addEventListener('resize',resizeHandler);
 resizeHandler();
+
+// navigation click event
+const nav = document.querySelector('nav');
+
+let currentNav;
+
+function navHandler(event) {
+
+    if(currentNav) {
+        currentNav.style.backgroundColor = 'transparent';
+        currentNav.style.color = 'black';
+    }
+
+    if(event.target !== event.currentTarget) {
+        console.log(event.target);
+        event.target.style.backgroundColor = 'black';
+        event.target.style.color = 'white';
+        currentNav = event.target; 
+    }
+}
+
+nav.addEventListener('click', navHandler); 
+
+// mouse wheel event
+// 휠 누를 때마다 넘어갈 구역이 필요함
+const section1 = document.querySelector('#section1');
+const section2 = document.querySelector('#section2');
+const section3 = document.querySelector('#section3');
+
+let currentSection = section1;  // 현재 페이지가 section1일 때
+
+window.addEventListener('wheel', function(event){
+    // console.log(event);
+    if(event.deltaY > 0) {  // 100 휠을 아래로 내린 경우
+        if(currentSection === section1){
+            window.scrollTo({top: section2.offsetTop, behavior:'smooth'});
+            currentSection = section2;
+        } else if(currentSection === section2) {
+            window.scrollTo({top: section3.offsetTop, behavior:'smooth'});
+            currentSection = section3;
+        }
+    } else {    //-100 휠을 위로 올린 경우
+        if(currentSection === section3){
+            window.scrollTo({top: section2.offsetTop, behavior:'smooth'});
+            currentSection = section2;
+        } else if(currentSection === section2) {
+            window.scrollTo({top: section1.offsetTop, behavior:'smooth'});
+            currentSection = section1;
+    }
+}
+});
+
+// scroll - animation 살짝,,
+window.addEventListener('scroll', function(){
+    // console.log(section2.getBoundingClientRect().top);
+    if(section2.getBoundingClientRect().top === 0) {
+        // console.log(section2.children[0]); // h2랑 p가 있음
+        section2.children[0].classList.add('text-animation');
+    } else {
+        section2.children[0].classList.remove('text-animation');
+    }
+});

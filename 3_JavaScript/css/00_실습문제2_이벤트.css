@@ -107,3 +107,18 @@ main #top a {   /*a태그랑 원이 따로 놀고 있으므로*/
     height: 100%;
     
 }
+
+.text-animation {
+    animation: textAni 1s forwards;
+}
+
+@keyframes textAni {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    } 
+    to {
+        opacity: 1;
+        transform: translate(-10px);    /*위로 올리기때문에 마이너스*/
+    }
+}
