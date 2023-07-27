@@ -83,11 +83,13 @@ $('h4').not('.test').css({
  // h2 요소의 다음에 오는 모든 형제 요소에 배경색을 pink로 적용
  $('.wrap2 h2').nextAll().css('background-color','pink');
  // h2 요소 이후부터 p 요소 이전에 모든 형제 요소에 테두리 스타일 : dashed
- $('.wrap2 h2').prev('p').css('border','dashed');
+//  $('.wrap2 h2').prev('p').css('border','dashed');
+ $('.wrap2 h2').nextUntil('p').css('border', 'dashed');
  // h2 요소의 이전 형제 요소에 style5 적용
  $('.wrap2 h2').prev().css(style5);
  // h2 요소의 이전에 오는 모든 형제 요소에 배경색: moccasin
- $('.wrap2 h2').prevAll().css('background-color','moccasin');
+//  $('.wrap2 h2').prevAll().css('background-color','moccasin');
+ $('.wrap2 h2').prevAll().css('background', 'moccasin');
  // h2 요소의 이전부터 p 요소 이후까지의 모든 형제 요소에 글자 크기 : 2rem
  $('.wrap2 h2').prevUntil('p').css('font-style','2rem');
 
