@@ -94,3 +94,28 @@ $('#textarea2').on('keyup', function(event) {
         // console.log($(event.target).val());   //-> #textarea2를 가리킴
         
 });
+
+$('#userId').keyup(function(event) {
+    console.log($(event.target).val());
+    const id = $(event.target).val();
+    const regExp = /^[a-z]{1}[a-z0-9]{4,12}$/;  // {4,12}여기에서 띄어쓰기 있으면 안돼
+
+    if(regExp.test(id)){
+        $('#idCheck').text('사용 가능한 아이디입니다.').css('color','green');
+    } else if(id === ""){
+        $('#idCheck').text("");
+    } else {
+        $('#idCheck').text('사용 불가능한 아이디입니다.').css('color','red');
+    }
+
+});
+
+// 3. trigger() 메소드
+$('#area3').on('click', function(event){ 
+    let currentCount = parseInt($('#counter2').text());
+    $('#counter2').text(++currentCount);
+   
+});
+$('#btn').on('click', function(){
+    $('#area3').trigger('click');
+});
